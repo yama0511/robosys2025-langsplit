@@ -33,12 +33,6 @@ Python script
 cat mixed_log.txt | ./langsplit 1> english.txt 2> japanese.txt
 ```
 
-3. ヘルプの表示
-* オプション --help で使い方が表示されます。
-
-```bash
-./langsplit --help
-```
 ## インストール
 * このリポジトリをクローンし、実行権限を付与してください。
 
