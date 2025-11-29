@@ -20,7 +20,7 @@
 *パイプを使ってテキストを渡すと、画面上で分離されて表示されます。
 
 ```bash
-$ echo -e "Hello World\nこんにちは\nPython script" | ./langsplit
+echo -e "Hello World\nこんにちは\nPython script" | ./langsplit
 ```
 
 Hello World
@@ -30,22 +30,22 @@ Python script
 *標準出力と標準エラー出力を別々のファイルに保存することで、完全に分離できます。
 
 ```bash
-$ cat mixed_log.txt | ./langsplit 1> english.txt 2> japanese.txt
+cat mixed_log.txt | ./langsplit 1> english.txt 2> japanese.txt
 ```
 
 3. ヘルプの表示
 * オプション --help で使い方が表示されます。
 
 ```bash
-$ ./langsplit --help
+./langsplit --help
 ```
 ## インストール
 * このリポジトリをクローンし、実行権限を付与してください。
 
 ```bash
-$ git clone [https://github.com/yama0511/robosys2025-langsplit.git](https://github.com/yama0511/robosys2025-langsplit.git)
-$ cd robosys2025-langsplit
-$ chmod +x langsplit
+git clone [https://github.com/yama0511/robosys2025-langsplit.git](https://github.com/yama0511/robosys2025-langsplit.git)
+cd robosys2025-langsplit
+chmod +x langsplit
 ```
 ## ライセンス
 * このソフトウェアは、BSD 3-Clause License の下で公開されています。 詳細については LICENSE をご確認ください。
