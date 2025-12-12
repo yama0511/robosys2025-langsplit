@@ -33,18 +33,19 @@ Python script
 cat mixed_log.txt | ./langsplit 1> ascii.txt 2> others.txt
 ```
 
-##インストール
+## インストール
 このリポジトリをクローンし、実行権限を付与してください。
 
 ```bash
-git clone [https://github.com/yama0511/robosys2025-langsplit.git$](https://github.com/yama0511/robosys2025-langsplit.git$) cd robosys2025-langsplit
-```
-```bash
+git clone https://github.com/yama0511/robosys2025-langsplit.git
+
+cd robosys2025-langsplit
+
 chmod +x langsplit
 ```
 
-##ライセンス
+## ライセンス
 このソフトウェアは、BSD 3-Clause License の下で公開されています。 詳細については LICENSE をご確認ください。
 
-##Copyright
+## Copyright
 (C) 2025 Yamato Okada
