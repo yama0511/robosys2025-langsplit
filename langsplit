@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
-# SPDX-FileCopyrightText: 2025 [yama0511]
+# SPDX-FileCopyrightText: 2025 Yamato Okada
 # SPDX-License-Identifier: BSD-3-Clause
 
 import sys
 import re
+import signal
+
+signal.signal(signal.SIGPIPE, signal.SIG_DFL)
 
 def main():
     for line in sys.stdin:
+        original_line = line
         line = line.strip()
-        # 英語（ASCII文字）の数をカウント
-        english_count = len(re.findall(r'[a-zA-Z0-9]', line))
-        # 全体の文字数
+        if not line:
+            continue
+
+        ascii_count = len(re.findall(r'[ -~]', line))
         total_count = len(line)
 
-        if total_count > 0 and (english_count / total_count) >= 0.5:
-            print(line, file=sys.stdout)
+        if total_count > 0 and (ascii_count / total_count) >= 0.5:
+            print(original_line, end='', file=sys.stdout)
         else:
-            print(line, file=sys.stderr)
+            print(original_line, end='', file=sys.stderr)
 
 if __name__ == '__main__':
     main()
